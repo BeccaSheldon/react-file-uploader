@@ -1,8 +1,8 @@
-$primary: #21A3A3;
-$secondary:#04508E;
-$tertiary: #FC8F8A;
+$primary: #82203E;
+$secondary:#DF3461;
+$tertiary: #35183C;
 $white: #FFFFFF;
-$blue: #C6DEFF;
+$peach: #E86F54;
 
 * {
   box-sizing: border-box;
@@ -15,13 +15,13 @@ html, body {
 }
 
 body {
-	background-color: $secondary;
+	background-color: $tertiary;
 	display: flex;
 	flex-direction: column;
 }
 
 a {
-	color: $blue;
+	color: $peach;
 	cursor: pointer;
 	text-decoration: none;
 
@@ -31,13 +31,10 @@ a {
 	}
 }
 
-h1, h2, h3, h4 p {
+h1, h2, h3, h4, p {
+	color: $white;
 	font-weight: 300;
   text-align: center;
-}
-
-h1, h2, h3, h4 {
-	color: $white;
 }
 
 ul {
@@ -53,7 +50,7 @@ ul {
 .App {
 	.Wrapper {
 		flex: 1 0 auto;
-		// height: 80vh;
+		height: 80vh;
 	}
 
 	.Row {
@@ -68,8 +65,28 @@ ul {
 		height: 6rem;
 	}
 
-	.Weather-details {
-		text-align: center;
+	.Projects {
+		text-align: right;
+	}
+
+	.Button-add {
+		background-color: $secondary;
+		border: 1px solid $primary;
+		border-radius: 50%;
+		color: $white;
+		height: 3rem;
+		margin: 1rem;
+		width: 3rem;
+
+		.fa {
+			font-size: 1rem;
+		}
+
+		&:hover {
+			background-color: $primary;
+			color: $peach;
+			cursor: pointer;
+		}
 	}
 
 	.Search {
@@ -86,21 +103,6 @@ ul {
 
 			&:focus {
 				outline: none;
-			}
-		}
-
-		.Search-button {
-			background-color: $white;
-			border: none;
-			color: $tertiary;
-			cursor: pointer;
-			font-size: 1.2rem;
-			margin-left: -2rem;
-			padding: 0;
-
-			i:hover {
-				color: $primary;
-				animation: spin 1s linear 1;
 			}
 		}
 	}
@@ -183,7 +185,7 @@ ul {
 	  display: flex;
 	  flex-flow: row wrap;
 	  font-family: 'Quicksand';
-	  justify-content: space-around;
+	  justify-content: space-between;
 		padding: 1.25rem 0.5rem;
 
 		ul li {

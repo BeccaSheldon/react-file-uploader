@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import IconFinder from './IconFinder.jsx'
+import Button from '../basic/Button.jsx'
 import Loading from '../basic/Loading.jsx'
 import Row from '../layout/Row.jsx'
 
@@ -9,15 +9,11 @@ export default class Landing extends Component {
 			<div className="Landing">
         {this.props.loading  && <Loading />}
         {!this.props.loading &&
-          <Row className="Weather">
-  					<h1>Current conditions in {this.props.currentCity}</h1>
-            <div className="Weather-details">
-              <h2>
-                {this.props.currentTemperature} degrees
-                <IconFinder icon={this.props.icon} />
-                {this.props.currentCondition}
-              </h2>
-            </div>
+          <Row>
+            <h1>Projects</h1>
+            <p>Add files or create new project directories.</p>
+            <Button className="Button-add" iconName="file-o" />
+            <Button className="Button-add" iconName="folder-o" />
           </Row>
   			}
 			</div>

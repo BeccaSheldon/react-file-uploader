@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
-import Forecast from './complex/Forecast.jsx'
 import NavFooter from './layout/NavFooter.jsx'
 import NavHeader from './layout/NavHeader.jsx'
-import Start from './complex/Start.jsx'
+import Projects from './complex/Projects.jsx'
 
 export default class App extends Component {
 	render() {
@@ -10,8 +9,7 @@ export default class App extends Component {
 			<div className="App">
 				<div className="Wrapper">
 					<NavHeader />
-					<Start />
-	  			<Forecast />
+					<Projects />
 				</div>
 				<NavFooter />
 			</div>
