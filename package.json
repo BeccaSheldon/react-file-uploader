@@ -1,9 +1,9 @@
 {
-  "name": "React-Weather-App",
+  "name": "React-File-Uploader",
   "version": "1.0.0",
-  "description": "Weather search app built in React and using OpenWeather Api.",
+  "description": "React app with custom built file uploader.",
   "license": "ISC",
-  "repository": "http://github.com/beccasheldon/react-weather-app",
+  "repository": "http://github.com/beccasheldon/react-file-uploader",
   "scripts": {
     "start": "node ./server"
   },
