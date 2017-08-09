@@ -3,19 +3,20 @@ import Button from '../basic/Button.jsx'
 import Input from '../basic/Input.jsx'
 import Row from '../layout/Row.jsx'
 
-export default class Search extends Component {
+export default class AddFile extends Component {
 	render() {
 		return(
-			<Row className="Search">
+			<Row className="Add-file">
 			  <Input
-			  	changeHandler={this.props.changeHandler}
-			  	className="Search-input"
-			  	placeholder="Type in a city name, like 'San Francisco'"
-			  	type="text"
+			    changeHandler={this.props.changeHandler}
+			    className="Add-file-input"
+			    placeholder="Type in a file name"
+			    type="text"
 			  />
 			  <Button
-			    className="Search-button"
+			    className="Add-file-button"
 			    clickHandler={this.props.clickHandler}
+			    iconName="plus"
 			  />
 			</Row>
 		)

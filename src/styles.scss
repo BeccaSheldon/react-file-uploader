@@ -2,7 +2,7 @@ $primary: #82203E;
 $secondary:#DF3461;
 $tertiary: #35183C;
 $white: #FFFFFF;
-$peach: #E86F54;
+$peach: #FC8F8A;
 
 * {
   box-sizing: border-box;
@@ -26,7 +26,7 @@ a {
 	text-decoration: none;
 
 	&:hover {
-		color: $tertiary;
+		color: $white;
 		animation: pulse 1s linear infinite;
 	}
 }
@@ -65,122 +65,6 @@ ul {
 		height: 6rem;
 	}
 
-	.Projects {
-		text-align: right;
-	}
-
-	.Button-add {
-		background-color: $secondary;
-		border: 1px solid $primary;
-		border-radius: 50%;
-		color: $white;
-		height: 3rem;
-		margin: 1rem;
-		width: 3rem;
-
-		.fa {
-			font-size: 1rem;
-		}
-
-		&:hover {
-			background-color: $primary;
-			color: $peach;
-			cursor: pointer;
-		}
-	}
-
-	.Search {
-		text-align: center;
-
-		.Search-input {
-			border: 1px solid $primary;
-			border-radius: 2rem;
-			color: $tertiary;
-			font-size: 16px;
-			height: 3rem;
-			padding: 0 2rem;
-			width: 50%;
-
-			&:focus {
-				outline: none;
-			}
-		}
-	}
-
-	.Results {
-		display: flex;
-		flex-flow: row wrap;
-		flex-shrink: 1;
-		justify-content: space-around;
-
-		h2 {
-			width: 100%;
-		}
-
-		// Results displayed as cards
-		.Result-item {
-			background-color: $white;
-			border: 1px solid $primary;
-			border-radius: 10px;
-			box-shadow: 0 1px 1px $secondary;
-			height: 17rem;
-			margin: 1rem 0.5rem;
-			padding: 1rem;
-			text-align: center;
-		  width: 17rem;
-
-			&:hover {
-				animation: bounce 0.25s 4 alternate;
-				box-shadow: 0 3px 10px 6px #CCF3FF,
-										0 3px 10px 6px #CCF3FF;
-			}
-		}
-
-		.Result-item-heading {
-			color: $primary;
-			display: block;
-			font-family: 'Quicksand';
-			font-weight: 400;
-
-			&:hover {
-				color: $primary;
-			}
-		}
-
-		.Result-item-subheading {
-			display: block;
-		}
-
-		.Result-item-row {
-			width: 50%;
-		}
-
-		// Results displayed as table
-		.Result-table {
-			background-color: $white;
-			border: 1px solid $primary;
-			border-radius: 1rem;
-			box-shadow: 0 1px 1px $secondary;
-			text-align: center;
-			vertical-align: middle;
-
-			.Result-row {
-				&:hover {
-					// animation: bounce 0.25s 4 alternate;
-					border-radius: 0.5rem;
-					box-shadow: 0 3px 10px 6px #CCF3FF,
-											0 3px 10px 6px #CCF3FF;
-				}
-			}
-
-			.Result-header,
-			.Result-cell {
-				padding: 0.5rem;
-				width: 10rem;
-			}
-		}
-	}
-
 	.Navbar-items {
 	  display: flex;
 	  flex-flow: row wrap;
@@ -200,88 +84,78 @@ ul {
 		}
 	}
 
-	.Header .Navbar-items {
-		justify-content: flex-end;
+	.Projects {
+		text-align: center;
+
+		.Add-file {
+			.Add-file-input {
+				border: 1px solid $primary;
+				border-radius: 2rem;
+				color: $tertiary;
+				font-size: 16px;
+				height: 3rem;
+				padding: 0 2rem;
+				width: 50%;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			.Add-file-button {
+				background-color: $white;
+				border: none;
+				color: $peach;
+				cursor: pointer;
+				font-size: 1.2rem;
+				margin-left: -2rem;
+				padding: 0;
+
+				i:hover {
+					color: $primary;
+					animation: spin 1s linear 1;
+				}
+			}
+		}
 	}
 
-	.Footer .Navbar-items {
-		flex-flow: initial;
-	}
+	.Files {
+		display: flex;
+		flex-flow: row wrap;
+		flex-shrink: 1;
+		justify-content: space-around;
 
-	.Cloud {
-		animation: 3s linear cloud infinite;
-	}
+		.Table {
+			background-color: $white;
+			border: 1px solid $primary;
+			border-radius: 1rem;
+			box-shadow: 0 1px 1px $secondary;
+			text-align: center;
+			vertical-align: middle;
 
-	.Rain1 {
-		animation: 8s linear rain1 infinite;
-	}
+			.Table-row {
+				&:hover {
+					border-radius: 0.5rem;
+					box-shadow: 0 3px 10px 6px #CCF3FF,
+											0 3px 10px 6px #CCF3FF;
+				}
+			}
 
-	.Rain2 {
-		animation: 8s linear rain2 infinite;
-		animation-delay: 0.25s;
-	}
-
-	.Sun {
-		animation: 9s linear sun infinite;
-	}
-
-	.Sun line {
-		animation: 2s shine linear infinite;
+			.Table-header,
+			.Table-row-cell {
+				padding: 0.5rem;
+				width: 10rem;
+			}
+		}
 	}
 
 	// ANIMATION KEYFRAMES
 	@keyframes pulse {
-	  25% {color: $primary;}
-		75% {color: $tertiary;}
+	  25% {color: $peach;}
+		75% {color: $secondary;}
 	}
 
 	@keyframes spin {
 		100% {transform: rotate(360deg);}
 	}
-
-	@keyframes bounce {
-	 from {transform: translateY(0px);}
-	 to {transform: translateY(-15px);}
-	}
-
-	@keyframes cloud {
-	  0% {transform: translate(0px,0px);}
-	  50% {transform: translate(2px,0px);}
-	  100% {transform: translate(0px,0px);}
-	}
-
-	@keyframes rain1 {
-		0% {stroke-dashoffset: 0;}
-  	100% {stroke-dashoffset: -100;}
-  }
-
-	@keyframes rain2 {
-		0% {stroke-dashoffset: 0;}
-  	100% {stroke-dashoffset: -100;}
-  }
-
-	@keyframes sun {
-	  0% {transform: rotate(0deg);}
-	  100% {transform: rotate(360deg);}
-	}
-
-	@keyframes shine {
-	  0% {
-	    stroke-dasharray: 3px 10px;
-	    stroke-dashoffset: 0px;
-	  }
-	  50% {
-	    stroke-dasharray: 0.1px 10px;
-	    stroke-dashoffset: -1px;
-	  }
-	  100% {
-	    stroke-dasharray: 3px 10px;
-	    stroke-dashoffset: 0px;
-	  }
-	}
 }
-
-
-
-
-
