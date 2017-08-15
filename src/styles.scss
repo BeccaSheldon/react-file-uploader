@@ -87,7 +87,7 @@ ul {
 	.Projects {
 		text-align: center;
 
-		.Add-file {
+		.Add-files {
 			.Add-file-input {
 				border: 1px solid $primary;
 				border-radius: 2rem;
@@ -95,14 +95,14 @@ ul {
 				font-size: 16px;
 				height: 3rem;
 				padding: 0 2rem;
-				width: 50%;
+				width: 25%;
 
 				&:focus {
 					outline: none;
 				}
 			}
 
-			.Add-file-button {
+			.Add-folder-button {
 				background-color: $white;
 				border: none;
 				color: $peach;
@@ -119,19 +119,16 @@ ul {
 		}
 	}
 
-	.Files {
-		display: flex;
-		flex-flow: row wrap;
-		flex-shrink: 1;
-		justify-content: space-around;
+	.Table {
+		background-color: $white;
+		border: 1px solid $primary;
+		border-radius: 1rem;
+		box-shadow: 0 1px 1px $secondary;
+		text-align: center;
+		vertical-align: middle;
 
-		.Table {
-			background-color: $white;
-			border: 1px solid $primary;
-			border-radius: 1rem;
-			box-shadow: 0 1px 1px $secondary;
-			text-align: center;
-			vertical-align: middle;
+		table {
+			width: 100%;
 
 			.Table-row {
 				&:hover {

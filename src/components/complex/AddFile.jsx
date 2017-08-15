@@ -6,15 +6,15 @@ import Row from '../layout/Row.jsx'
 export default class AddFile extends Component {
 	render() {
 		return(
-			<Row className="Add-file">
+			<Row className="Add-files">
 			  <Input
 			    changeHandler={this.props.changeHandler}
 			    className="Add-file-input"
-			    placeholder="Type in a file name"
+			    placeholder="Type in a folder name"
 			    type="text"
 			  />
 			  <Button
-			    className="Add-file-button"
+			    className="Add-folder-button"
 			    clickHandler={this.props.clickHandler}
 			    iconName="plus"
 			  />

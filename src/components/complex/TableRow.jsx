@@ -5,13 +5,16 @@ export default class TableRow extends Component {
 		return (
 			<tr className="Table-row">
 				<td className="Table-row-cell">
+					{this.props.id}
+				</td>
+				<td className="Table-row-cell">
 					{this.props.name}
 				</td>
 				<td className="Table-row-cell">
-					{this.props.size}
+					{this.props.date}
 				</td>
 				<td className="Table-row-cell">
-					{this.props.date}
+					{this.props.size}
 				</td>
 			</tr>
 		)

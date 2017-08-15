@@ -9,31 +9,30 @@ export default class Projects extends Component {
 		super(props)
 		this.state = {
 			files: [],
-			fileName: '',
+			newFile: {
+				name: '',
+				date: '',
+				size: ''
+			},
 			loading: false
 		}
 	}
 
 	handleSubmit() {
-	  this.setState({loading: true})
-		let url = `http://localhost:8080/react-file-uploader/projects`
-
-	  fetch(url, {
-	  	method: 'POST',
-	  	body: JSON.stringify(this.state.fileName)
-	  })
-	  .then(result => result.json())
-	  .then((data) => {
-    	this.setState({
-    		loading: false,
-    		files: data
-    	})
-	  })
-	  .catch(err => new Error(console.log('Hit a snag: ' + err)))
-  }
+		this.setState({loading: true})
+		this.state.files.push(this.state.newFile)
+		this.setState({loading: false})
+		console.log(this.state.files.length)
+	}
 
 	handleChange(event) {
-	  this.setState({fileName: event.target.value})
+	  this.setState({
+	  	newFile: {
+		  	name: event.target.value,
+		  	date: Date.now(),
+		  	size: 'tbd'
+		  }
+	  })
 	}
 
 	render() {
@@ -46,9 +45,9 @@ export default class Projects extends Component {
 					value={this.state.fileName}
 				/>
 				{this.state.loading && <Loading />}
-				{!this.state.loading &&
+				{!this.state.loading && this.state.files.length >= 1 &&
 					<Table
-						tableRows={this.state.files}
+						files={this.state.files}
 					/>
 				}
 			</Row>

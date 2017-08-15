@@ -12,7 +12,7 @@ export default class NavHeader extends Component {
 							className="pulse"
 							target="_blank"
 							text="Source"
-							url="http://github.com/beccasheldon/vanilla-search-ui"
+							url="https://github.com/BeccaSheldon/react-file-uploader"
 						></Link>
 					</li>
 				</ul>
