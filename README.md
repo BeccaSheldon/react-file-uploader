@@ -1,19 +1,21 @@
-#### What Does This Repo Do?
-This is a little app that gets a weekly weathr forecast for a user-entered city. It uses Webpack 3, Babel, React, and the OpenWeather API.
+This is a little app that .
 
-#### Still To Do
-- Optimize browser storage with cached searches
-- More animations?
-- Nicer UI?
-- Add more React things? (Router?, Mobx?)
-- Improve component code?
+## Intention:
+- Set up a React app environment - using Webpack 3, Babel, and React.
+- Pass state and props between components (this is very different from Vue - still getting the hang of it).
 
-#### Run Locally
-Just clone, run yarn, then `npm start` or `node_modules/.bin/webpack-dev-server` for hot reloading.
+## Design:
+- Responsive.
 
-```
-## Screenshots:
-![](screenshot.png)
+## Logic:
+-
+
+## Running Locally:
+1. `git clone https://github.com/BeccaSheldon/react-weather-forecast.git`
+2. `yarn` or `npm install`
+3. `npm start` or `node_modules/.bin/webpack-dev-server` for hot reloading
+
+## Screenshot:
 
 #
 ####  Thanks for taking the time to check out this repo and README.<3
