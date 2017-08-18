@@ -1,10 +1,11 @@
 import React from 'react'
+import Credentials from './credentials.json'
 import AWS from 'aws-sdk'
 
 export default function setupS3(file) {
 	AWS.config.update({
-		accessKeyId: 'AKIAI6U63PCNU4TI74AQ',
-		secretAccessKey: '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',
+		accessKeyId: Credentials.accessKeyId,
+		secretAccessKey: Credentials.secretAccessKey,
 		'region': 'us-west-1'
 	})
 	let params = {

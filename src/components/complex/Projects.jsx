@@ -23,7 +23,8 @@ export default class Projects extends Component {
 
 		S3().listObjects((err, data) => {
 			this.setState({loading: false})
-			this.setState({files: data.Contents})
+			if (err) console.log("Hit a snag listing items: ", err, err.stack)
+			if (data) this.setState({files: data.Contents})
 		})
 	}
 
