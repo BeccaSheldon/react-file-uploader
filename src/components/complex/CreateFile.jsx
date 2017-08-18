@@ -8,15 +8,15 @@ export default class CreateFile extends Component {
 		return(
 			<Row className="Create-file">
 				<h3>Add a File</h3>
-			  <Input
-				  changeHandler={this.props.nameFile}
-				  className="Create-file-input"
-				  placeholder="Type in a file name"
-				  type="text"
+				<Input
+					changeHandler={this.props.nameFile}
+					className="Create-file-input create-file"
+					placeholder="Type in a file name"
+					type="text"
 				/>
 				<Input
 		  	  changeHandler={this.props.chooseFile}
-		  	  className="Choose-file-input"
+		  	  className="Choose-file-input create-file"
 		  	  type="file"
 		  	/>
 		  	<Button

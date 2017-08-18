@@ -7,12 +7,12 @@ export default class TableRow extends Component {
 	render() {
 		return (
 			<tr className="Table-row">
-				<td className="Table-row-cell id">
-					{this.props.id}
+				<td className="Table-row-cell type">
+					<i className={this.props.type === 1 ? 'fa fa-folder' : 'fa fa-file'}></i>
 				</td>
 				<td className="Table-row-cell name">
 					<Link
-						href="#"
+						url={this.props.type === 'folder' ? null : this.props.href}
 						text={this.props.name}
 					/>
 				</td>

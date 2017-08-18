@@ -12,6 +12,7 @@ export default class AddFiles extends Component {
 					nameFolder={this.props.nameFolder}
 				/>
 				<CreateFile
+					chooseFile={this.props.chooseFile}
 					createFile={this.props.createFile}
 					nameFile={this.props.nameFile}
 				/>
