@@ -31,7 +31,7 @@ a {
 	}
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, p, ol li {
 	color: $white;
 	font-weight: 300;
   text-align: center;
@@ -50,7 +50,7 @@ ul {
 .App {
 	.Wrapper {
 		flex: 1 0 auto;
-		height: 80vh;
+		height: 100vh;
 	}
 
 	.Row {
@@ -88,21 +88,37 @@ ul {
 		text-align: center;
 
 		.Add-files {
-			.Add-file-input {
+			.Create-file {
+				display: inline-block;
+				padding: 1rem;
+
+				ol li {
+					padding: 0.35rem;
+				}
+			}
+
+			input[type="text"],
+			input[type="file"] {
 				border: 1px solid $primary;
 				border-radius: 2rem;
 				color: $tertiary;
 				font-size: 16px;
-				height: 3rem;
+				height: 2rem;
 				padding: 0 2rem;
-				width: 25%;
 
 				&:focus {
 					outline: none;
 				}
 			}
 
-			.Add-folder-button {
+			input[type="file"] {
+				background-color: $white;
+				height: auto;
+				padding: 6px 5px 3px 5px;
+			}
+
+			.Add-button,
+			.Upload-button {
 				background-color: $white;
 				border: none;
 				color: $peach;
@@ -133,19 +149,44 @@ ul {
 			.Table-row {
 				&:hover {
 					border-radius: 0.5rem;
-					box-shadow: 0 3px 10px 6px #CCF3FF,
-											0 3px 10px 6px #CCF3FF;
+					box-shadow: 0 1px 10px 3px $secondary,
+											0 3px 10px 3px $peach;
 				}
 			}
 
 			.Table-header,
 			.Table-row-cell {
 				padding: 0.5rem;
-				width: 10rem;
+			}
+
+			.date,
+			.id,
+			.size {
+				width: 4rem;
+			}
+
+			.name {
+				width: 6rem;
 			}
 		}
 	}
 
+	.Edit-button {
+		background: $white;
+		border: none;
+		cursor: pointer;
+		padding-left: 1rem;
+
+		.fa {
+			color: $secondary;
+			font-size: 1rem;
+
+			&:hover {
+				color: $primary;
+				animation: spin 1s linear 1;
+			}
+		}
+	}
 	// ANIMATION KEYFRAMES
 	@keyframes pulse {
 	  25% {color: $peach;}
