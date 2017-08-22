@@ -187,6 +187,11 @@ ul {
 			}
 		}
 	}
+
+	.hidden {
+		visibility: hidden;
+	}
+
 	// ANIMATION KEYFRAMES
 	@keyframes pulse {
 	  25% {color: $peach;}
