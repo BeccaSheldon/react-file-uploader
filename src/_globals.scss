@@ -1,0 +1,42 @@
+@import "./_colors.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+	font-family: 'Lato', sans-serif;
+	height: 100%;
+	padding: 0 2%;
+}
+
+body {
+	background-color: $tertiary;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	color: $peach;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: $white;
+		animation: pulse 1s linear infinite;
+	}
+}
+
+h1, h2, h3, h4, p, ol li {
+	color: $white;
+	font-weight: 300;
+  text-align: center;
+}
+
+ul {
+	padding: 0;
+
+	li {
+		list-style: none;
+	}
+}

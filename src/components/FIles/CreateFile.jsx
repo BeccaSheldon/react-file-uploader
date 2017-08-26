@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
-import Button from '../basic/Button.jsx'
-import Input from '../basic/Input.jsx'
-import Row from '../layout/Row.jsx'
+import Button from '../Buttons/Button.jsx'
+import Input from '../Inputs/Input.jsx'
+import Row from '../Row/Row.jsx'
 
 export default class CreateFile extends Component {
 	render() {
 		return(
-			<Row className="Create-file">
+			<Row rowClass="Create-file">
 				<h3>Add a File</h3>
 				<Input
 					changeHandler={this.props.nameFile}
@@ -20,9 +20,9 @@ export default class CreateFile extends Component {
 		  	  type="file"
 		  	/>
 		  	<Button
-		  	  className="Upload-button"
+		  	  buttonClass="Upload-button"
 		  	  clickHandler={this.props.createFile}
-		  	  iconName="upload"
+		  	  iconClass="upload"
 		  	/>
 			</Row>
 		)

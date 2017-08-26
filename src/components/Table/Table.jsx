@@ -1,11 +1,15 @@
 import React, {Component} from 'react'
-import Row from '../layout/Row.jsx'
+import Row from '../row/Row.jsx'
 import TableRow from './TableRow.jsx'
 
 export default class Table extends Component {
+	checkForChildren(file) {
+		return file.children.length > 0 ? true : false
+	}
+
 	render() {
 		return(
-			<Row className="Table">
+			<Row rowClass="Table">
 				<table>
 					<thead>
 						<tr>
@@ -18,7 +22,7 @@ export default class Table extends Component {
 					<tbody>
 						{this.props.files.map((file, index) => (
 							<TableRow
-								children={file.children}
+								children={this.checkForChildren(file.children)}
 								className={file.className}
 								date={file.date}
 								name={file.name}
