@@ -1,0 +1,11 @@
+@import "./_colors.scss";
+
+// ANIMATION KEYFRAMES
+@keyframes pulse {
+  25% {color: $peach;}
+	75% {color: $secondary;}
+}
+
+@keyframes spin {
+	100% {transform: rotate(360deg);}
+}
